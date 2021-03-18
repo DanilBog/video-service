@@ -44,6 +44,7 @@ article, nav {
   width: 100%;
   margin-left: auto;
   margin-right: auto;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
   }
 
 .header{
@@ -126,8 +127,9 @@ a:active {
 // Стилли блока контент
 .content__film {
   display: grid;
-  grid-template-rows: 1fr;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
+  //grid-template-rows: 1fr;
+  //grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
 
 }
 // Карточки фильмов
@@ -167,8 +169,9 @@ a:active {
 .content__genre {
   
   display: grid;
-  grid-template-rows: 1fr;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
+  //grid-template-rows: 1fr;
+ // grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
 }
 .card__genre__comedy {
   width: 280px;
