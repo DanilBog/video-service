@@ -1,6 +1,6 @@
 body { 
   display: grid;
-  height: 100vh;
+  // height: 100vh;
   }
 .app-root {
   display: grid;
@@ -9,51 +9,46 @@ body {
     "menu"
     "content"
     "footer";
-  grid-template-rows: 40px 100px 1fr 120px;
-  grid-template-columns: 1fr;
+  grid-template-rows: auto 100px 1fr 120px;
+  //grid-template-columns: 1fr;
   grid-gap: 10px;
   margin: 0;
-  height: 100vh;
+  // height: 100vh;
 }
 article, nav {
   // padding: 20px;
-  // background: gold;
+   background: gold;
 }
-#pageHeader {
-  grid-area: header;
-}
-#menu {
-  grid-area: menu;
-  max-width: 1180px;
-  width: 100%;
-  margin-left: auto;
-  margin-right: auto;
-  align-items: center;
-  display: grid;
-  text-align: center;
-}
-#pageFooter {
+
+.pageFooter {
   display: grid;
   grid-area: footer;
   background:  #F2F2F2;
 }
-#mainContent { 
-  display: grid;
+.mainContent { 
+  //display: grid;
+  
   grid-area: content; 
   max-width: 1180px;
   width: 100%;
   margin-left: auto;
   margin-right: auto;
-  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  //grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   }
-
-.header{
+// Самый верх страницы - Header
+.pageHeader{
+  grid-area: header;
   max-width: 1180px;
   width: 100%;
   margin-left: auto;
   margin-right: auto;
   display: grid;
-  grid-template-columns: 182px auto 113px;
+ // grid-template-columns: auto (auto-fill, minmax(auto, 393px) auto;
+  //grid-template-columns: repeat(auto-fit, minmax(182px, 1fr) minmax(402px, 1fr) minmax(113px, 1fr) );
+  // grid-template-columns: auto-fit minmax(402px, 1fr) auto-fit;
+  grid-template-columns: repeat(auto-fill, minmax(auto, 393px));
+  //grid-template-columns: auto 1fr auto;
+  //grid-template-columns: minmax(182px, 1fr) minmax(402px, 1fr) minmax(113px, 1fr);
   align-items: center; // выравнивание элементов по верт.
 }
 
@@ -78,7 +73,6 @@ article, nav {
 }
 .div__header__search {
   text-align: center;
-  vertical-align: middle;
 }
 .header__input {
   border: none;
@@ -87,6 +81,14 @@ article, nav {
   font-size: 16px;
 }
 .menu {
+  grid-area: menu;
+  max-width: 1180px;
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  align-items: center;
+  display: grid;
+  text-align: center;
   
 }
 .menu__link {
@@ -130,6 +132,10 @@ a:active {
   //grid-template-rows: 1fr;
   //grid-template-columns: 1fr 1fr 1fr 1fr;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  grid-gap: 1vw;
+  //place-items: center; //выравниевание карточек внутри блока , заменил на два :
+  align-items: inherit;
+  justify-items: center;
 
 }
 // Карточки фильмов
@@ -167,11 +173,15 @@ a:active {
 
 // Карточки жанров
 .content__genre {
-  
+  grid-gap: 1vw;
   display: grid;
   //grid-template-rows: 1fr;
  // grid-template-columns: 1fr 1fr 1fr 1fr;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  // place-items: center; заменил на ::content
+  align-items: inherit;
+  justify-items: center;
+
 }
 .card__genre__comedy {
   width: 280px;
@@ -180,11 +190,14 @@ a:active {
   box-shadow: inset 0px 0px 16px rgba(0, 0, 0, 0.15);
   border-radius: 6px;
   display: grid;
-  align-items: center;
-  text-align: center;
+  //align-items: center;
+  //text-align: center; можно заменить на ::content
+  place-items: center;
+  color: white;
   
 }
 .card__genre__dramm {
+  color: white;
   width: 280px;
   height: 208px;
   background: linear-gradient(127.83deg, #F2994A 8.44%, #EB5757 91.36%);
@@ -197,6 +210,7 @@ a:active {
   
 }
 .card__genre_fantastic {
+  color: white;
   width: 280px;
   height: 208px;
   border-radius: 6px;
@@ -209,6 +223,7 @@ a:active {
 }
 
 .card__genre_horrors {
+  color: white;
   width: 280px;
   height: 208px;
   border-radius: 6px;

@@ -1,28 +1,30 @@
-<header id="pageHeader" class="header">
+<header class="pageHeader">
   <div>
-    <img src="/assets/logo/logo.svg">
-  </div>
-  <div class="div__header__search">
-    <input class="header__input" size="30" value="Поиск...">
-    <button class="header__search__button">Найти</button>
-  </div>
-  <div class="div__header__button"> 
-    <button class="header__button">Войти</button>
+    <div>
+      <img src="/assets/logo/logo.svg">
+    </div>
+    <div class="div__header__search">
+      <input class="header__input" size="25" value="Поиск...">
+      <button class="header__search__button">Найти</button>
+    </div>
+    <div class="div__header__button"> 
+      <button class="header__button">Войти</button>
+    </div>
   </div>
 </header>
 
-<nav id="menu" class="menu">
+<nav class="menu">
   <div>
     <a routerLink="/films" routerLinkActive="active" class="menu__link">Фильмы</a>
     <a routerLink="/channels" routerLinkActive="active" class="menu__link">Телеканалы</a>
   </div>
 </nav>
 
-<div id="mainContent">
+<div class="mainContent">
   <router-outlet></router-outlet>
 </div>
 
-<footer id="pageFooter">
+<footer class="pageFooter">
   <div class="footer__div"> 
     <div>
         <img src="/assets/logo/htc-cs-logo.svg">

@@ -1,0 +1,20 @@
+.content__channel {
+    display: grid;
+    grid-gap: 1vw;
+    width:1180px; /* ширина нашего блока */
+    max-height:70%; /* высота нашего блока */
+    overflow: auto;
+
+}
+.card__channel {
+    background: #F2F2F2;
+    border-radius: 8px;
+    height: 162px;
+    display: grid;
+    align-items: center;
+    grid-template-columns: 30% 1fr;
+}
+.div__channel_img {
+    justify-items: center;
+    display: grid;
+}
